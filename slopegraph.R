@@ -10,9 +10,7 @@ data2 <- data %>%
   mutate_all(str_trim) %>%
   mutate(police = variable == "維持治安及保護人身安全")
  
-ggplot(data2, aes(x = year, y = value, 
-                  group = variable, label = value, 
-                  color = police)) +
+ggplot(data2, aes(x = year, y = value, group = variable, label = value, color = police)) +
   geom_line() +
   geom_point(colour = "white", size = 9) +
   geom_text() +
